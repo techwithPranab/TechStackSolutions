@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Box, Typography, Container, Card, CardContent, Avatar, Rating, IconButton } from '@mui/material';
+import { Box, Typography, Container, Card, CardContent, Avatar, Rating, IconButton, useMediaQuery, useTheme } from '@mui/material';
 import { motion } from 'framer-motion';
 
 import { testimonialsAPI } from '../services/api';
@@ -18,8 +18,13 @@ interface Testimonial {
 
 
 const TestimonialSection: React.FC = () => {
+
   const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
   const [index, setIndex] = useState(0);
+  const theme = useTheme();
+  const isXs = useMediaQuery(theme.breakpoints.only('xs'));
+  const isSm = useMediaQuery(theme.breakpoints.only('sm'));
+  const isMdUp = useMediaQuery(theme.breakpoints.up('md'));
 
   useEffect(() => {
     testimonialsAPI.getTestimonials()
@@ -27,11 +32,20 @@ const TestimonialSection: React.FC = () => {
       .catch(() => setTestimonials([]));
   }, []);
 
-  const visibleCount = 3;
+  let visibleCount = 3;
+  if (isXs) visibleCount = 1;
+  else if (isSm) visibleCount = 2;
+  else if (isMdUp) visibleCount = 3;
+
   const maxIndex = testimonials.length > visibleCount ? testimonials.length - visibleCount : 0;
 
   const handlePrev = () => setIndex(i => Math.max(i - 1, 0));
   const handleNext = () => setIndex(i => Math.min(i + 1, maxIndex));
+
+  // Reset index if visibleCount changes or testimonials change
+  useEffect(() => {
+    setIndex(0);
+  }, [visibleCount, testimonials.length]);
 
   const visibleTestimonials = testimonials.slice(index, index + visibleCount);
 

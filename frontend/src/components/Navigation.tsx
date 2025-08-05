@@ -38,7 +38,11 @@ const Navigation: React.FC = () => {
 
   const handleNav = (item: typeof navItems[0]) => {
     if (item.type === 'route') {
-      navigate(item.href);
+      if (item.href === '/' && window.location.pathname === '/') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        navigate(item.href);
+      }
       if (mobileOpen) setMobileOpen(false);
     } else if (item.type === 'home-section') {
       if (window.location.pathname !== '/') {
@@ -159,7 +163,7 @@ const Navigation: React.FC = () => {
             >
               <Button
                 variant="contained"
-                onClick={() => handleNav({ label: 'Contact', href: '#contact', type: 'scroll' })}
+                onClick={() => handleNav({ label: 'Contact', href: '#contact', type: 'home-section' })}
                 sx={{
                   background: 'linear-gradient(45deg, #667eea 0%, #764ba2 100%)',
                   borderRadius: 3,
@@ -175,14 +179,16 @@ const Navigation: React.FC = () => {
           )}
 
           {isMobile && (
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              edge="start"
-              onClick={handleDrawerToggle}
-            >
-              <MenuIcon />
-            </IconButton>
+            <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'flex-end' }}>
+              <IconButton
+                color="inherit"
+                aria-label="open drawer"
+                edge="end"
+                onClick={handleDrawerToggle}
+              >
+                <MenuIcon />
+              </IconButton>
+            </Box>
           )}
         </Toolbar>
       </AppBar>

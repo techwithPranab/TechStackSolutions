@@ -1,7 +1,36 @@
 import React from 'react';
 import { Box, Typography, Link, Container } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 const Footer: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleNavigation = (href: string, type: 'route' | 'section') => {
+    if (type === 'route') {
+      if (href === '/' && window.location.pathname === '/') {
+        // Already on home, scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        navigate(href);
+      }
+    } else if (type === 'section') {
+      if (window.location.pathname !== '/') {
+        navigate('/');
+        setTimeout(() => {
+          const element = document.querySelector(href);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 400);
+      } else {
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }
+  };
+
   return (
     <Box
       component="footer"
@@ -17,14 +46,69 @@ const Footer: React.FC = () => {
           © {new Date().getFullYear()} TechStack Solutions. All rights reserved.
         </Typography>
         <Box>
-          <Link href="/" color="inherit" underline="hover" sx={{ mx: 1 }}>
+          <Link 
+            component="button"
+            onClick={() => handleNavigation('/', 'route')}
+            color="inherit" 
+            underline="hover" 
+            sx={{ 
+              mx: 1,
+              background: 'none',
+              border: 'none',
+              cursor: 'pointer',
+              fontSize: 'inherit',
+              fontFamily: 'inherit'
+            }}
+          >
             Home
           </Link>
-          <Link href="/services" color="inherit" underline="hover" sx={{ mx: 1 }}>
+          <Link 
+            component="button"
+            onClick={() => handleNavigation('#services', 'section')}
+            color="inherit" 
+            underline="hover" 
+            sx={{ 
+              mx: 1,
+              background: 'none',
+              border: 'none',
+              cursor: 'pointer',
+              fontSize: 'inherit',
+              fontFamily: 'inherit'
+            }}
+          >
             Services
           </Link>
-          <Link href="/contact" color="inherit" underline="hover" sx={{ mx: 1 }}>
+          <Link 
+            component="button"
+            onClick={() => handleNavigation('#contact', 'section')}
+            color="inherit" 
+            underline="hover" 
+            sx={{ 
+              mx: 1,
+              background: 'none',
+              border: 'none',
+              cursor: 'pointer',
+              fontSize: 'inherit',
+              fontFamily: 'inherit'
+            }}
+          >
             Contact
+          </Link>
+          <Link 
+            component="button"
+            onClick={() => handleNavigation('/blog', 'route')}
+            color="inherit" 
+            underline="hover" 
+            sx={{ 
+              mx: 1,
+              background: 'none',
+              border: 'none',
+              cursor: 'pointer',
+              fontSize: 'inherit',
+              fontFamily: 'inherit'
+            }}
+          >
+            Blog
           </Link>
         </Box>
       </Container>
