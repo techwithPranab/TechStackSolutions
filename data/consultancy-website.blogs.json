@@ -1,0 +1,70 @@
+[{
+  "_id": {
+    "$oid": "689055c1c67ef5d9bd5d96d1"
+  },
+  "title": "Building a Cross-Platform Fintech App",
+  "summary": "How we delivered a secure, scalable mobile banking solution for FinEdge.",
+  "content": "We partnered with FinEdge to build a React Native app enabling seamless banking for thousands of users. Our focus was on security, performance, and a delightful user experience. The project included biometric authentication, real-time notifications, and integration with core banking APIs.",
+  "image": "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80",
+  "client": "FinEdge",
+  "technologies": [
+    "React Native",
+    "Node.js",
+    "MongoDB"
+  ],
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-08-04T06:40:01.642Z"
+  },
+  "updatedAt": {
+    "$date": "2025-08-04T06:40:01.642Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "689055c1c67ef5d9bd5d96d2"
+  },
+  "title": "Scaling Online Education with React.js",
+  "summary": "Case study: EduNext’s journey to a modern web platform.",
+  "content": "EduNext needed a robust web portal for their growing online course catalog. We built a scalable React.js SPA with Material-UI, custom theming, and seamless video integration. The result: improved engagement and a 40% increase in course signups.",
+  "image": "https://res.cloudinary.com/due8vcyim/image/upload/v1763221811/techstack-solution/blog/techstack-solution/blog/1763221805580-ChatGPT%20Image%20Nov%207%2C%202025%20at%2004_40_29%20PM.png.jpg",
+  "client": "EduNext",
+  "technologies": [
+    "React.js",
+    "TypeScript",
+    "Material-UI"
+  ],
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-08-04T06:40:01.643Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-15T15:50:16.515Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "689055c1c67ef5d9bd5d96d3"
+  },
+  "title": "Full-Stack Health Platform for Startups",
+  "summary": "How HealthSync launched a HIPAA-compliant health tracking app.",
+  "content": "HealthSync approached us to build a full-stack solution for their health tracking platform. We delivered a secure, cloud-deployed system with real-time analytics, user dashboards, and mobile-first design.",
+  "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
+  "client": "HealthSync",
+  "technologies": [
+    "Node.js",
+    "Express",
+    "React Native",
+    "MongoDB"
+  ],
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-08-04T06:40:01.643Z"
+  },
+  "updatedAt": {
+    "$date": "2025-08-04T06:40:01.643Z"
+  }
+}]

@@ -1,0 +1,42 @@
+[{
+  "_id": {
+    "$oid": "689047086fef6507301b4e55"
+  },
+  "username": "superadmin",
+  "name": "Super Admin",
+  "email": "pranabpiitk@gmail.com",
+  "password": "$2b$10$mD790eQN/9jN44mNeNNqE.advKWQAWgCoxF9t5sXVbknRM0gen3AG",
+  "role": "super-admin",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-08-04T05:37:12.856Z"
+  },
+  "updatedAt": {
+    "$date": "2025-08-04T06:04:00.371Z"
+  },
+  "__v": 0,
+  "lastLogin": {
+    "$date": "2025-08-04T06:04:00.370Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69189b5a28e9a7a0f3b08db3"
+  },
+  "username": "admin",
+  "name": "TechStack Admin",
+  "email": "admin@techstacksolutions.com",
+  "password": "$2b$10$fQ/OCb5HaFqTIQxOpXBijeb3Efife/3LC2ToZnemT2SXdn6yXt62G",
+  "role": "super-admin",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-11-15T15:25:14.412Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-15T15:26:41.159Z"
+  },
+  "__v": 0,
+  "lastLogin": {
+    "$date": "2025-11-15T15:26:41.158Z"
+  }
+}]

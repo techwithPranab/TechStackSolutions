@@ -1,0 +1,18 @@
+[{
+  "_id": {
+    "$oid": "689055c1c67ef5d9bd5d96d6"
+  },
+  "totalProjects": 50,
+  "totalYears": 8,
+  "totalMobileApps": 25,
+  "totalWebApps": 30,
+  "email": "pranabpiitk2024@gmail.com",
+  "contactNumber": "+91-9836027578",
+  "createdAt": {
+    "$date": "2025-08-04T06:40:01.645Z"
+  },
+  "updatedAt": {
+    "$date": "2025-08-04T06:41:20.681Z"
+  },
+  "__v": 0
+}]

@@ -1,0 +1,57 @@
+[{
+  "_id": {
+    "$oid": "689055c1c67ef5d9bd5d96cb"
+  },
+  "name": "Priya Sharma",
+  "company": "FinEdge",
+  "position": "Product Manager",
+  "content": "TechStack Solutions delivered our mobile banking app on time with flawless execution. Their team is highly professional and responsive.",
+  "rating": 5,
+  "image": "https://randomuser.me/api/portraits/women/44.jpg",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-08-04T06:40:01.640Z"
+  },
+  "updatedAt": {
+    "$date": "2025-08-04T06:40:01.640Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "689055c1c67ef5d9bd5d96cc"
+  },
+  "name": "Rahul Verma",
+  "company": "EduNext",
+  "position": "CTO",
+  "content": "Our web portal for online courses was built with great attention to detail. The UI is modern and our users love the experience!",
+  "rating": 5,
+  "image": "https://randomuser.me/api/portraits/men/32.jpg",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-08-04T06:40:01.640Z"
+  },
+  "updatedAt": {
+    "$date": "2025-08-04T06:40:01.640Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "689055c1c67ef5d9bd5d96cd"
+  },
+  "name": "Samantha Lee",
+  "company": "HealthSync",
+  "position": "Founder",
+  "content": "The team created a robust full-stack solution for our health tracking platform. Highly recommended for startups!",
+  "rating": 5,
+  "image": "https://randomuser.me/api/portraits/women/65.jpg",
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-08-04T06:40:01.640Z"
+  },
+  "updatedAt": {
+    "$date": "2025-08-04T06:40:01.640Z"
+  }
+}]
